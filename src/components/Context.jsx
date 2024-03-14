@@ -3,9 +3,15 @@ import React, {useState, createContext} from 'react'
 export const CartContext = createContext()
 
 const CartContextProvider = ({children}) => {
-    const [cart, setCart] = useState([])
+  const products = [...Array(20)].map(() => ({
+    id: faker.number.int(),
+    name: faker.person.fullName(),
+    price: faker.commerce.price(),
+    image: faker.image.url(),
+  }));
+
   return (
-    <CartContext.Provider value={{cart, setCart}}>
+    <CartContext.Provider value={{products, cart, setCart}}>
         {children}
     </CartContext.Provider>)
 }
