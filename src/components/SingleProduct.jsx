@@ -1,8 +1,8 @@
 import React, {useContext} from "react";
-import { Cart } from "./Context";
+import { CartContext } from "./Context";
 
 const SingleProduct = ({ prod}) => {
-    const { cart, setCart } = useContext(Cart);
+    const { cart, setCart } = useContext(CartContext);
   return (
     <div className="products">
       <img src={prod.image} alt={prod.className} />

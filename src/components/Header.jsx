@@ -1,9 +1,9 @@
 import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
-import { Cart } from './Context';
+import { CartContext } from './Context';
 
 const Header = () => {
-    const { cart, setCart } = useContext(Cart);
+    const { cart, setCart } = useContext(CartContext);
   return (
     <div>
         <span className="header">React Context API Tutorial</span>
